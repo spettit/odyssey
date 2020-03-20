@@ -3,8 +3,8 @@ import { graphql } from "gatsby"
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  // const newHtml = post.html.replace(/img src="/g, 'img src="https://caribbean-odyssey.netlify.com/')
-  const newHtml = post.html.replace(/img src="/g, 'img src="'+window.location.origin+'/')
+  const newHtml = post.html.replace(/img src="/g, 'img src="https://caribbean-odyssey.netlify.com/')
+  // const newHtml = post.html.replace(/img src="/g, 'img src="'+window.location.origin+'/')
   return (
       <div>
         <h1>{post.frontmatter.title}</h1>
