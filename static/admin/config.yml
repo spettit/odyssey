@@ -25,5 +25,6 @@ collections:
           label: "Gallery",
           name: "galleryImages",
           widget: "list",
-          field: { label: Image, name: image, widget: image },
+          required: false,
+          field: { label: Image, name: image, widget: image, required: false },
         }
