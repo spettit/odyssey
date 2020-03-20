@@ -24,16 +24,17 @@ module.exports = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-netlify-identity-widget',
     'gatsby-transformer-remark',
+    'gatsby-remark-relative-images',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
+          // {
+            // resolve: 'gatsby-remark-relative-images',
             // options: {
             //   name: 'uploads',
             // },
-          },
+          // },
           {
             resolve: 'gatsby-remark-images',
             options: {
