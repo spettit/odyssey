@@ -20,4 +20,10 @@ collections:
           widget: "image",
           required: false,
         }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Body", name: "body", widget: "markdown" },
+      - {
+          label: "Gallery",
+          name: "galleryImages",
+          widget: "list",
+          field: {label: Image, name: image, widget: image}
+        }
