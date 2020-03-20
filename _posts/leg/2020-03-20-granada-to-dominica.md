@@ -1,7 +1,0 @@
----
-layout: blog
-title: Granada to Dominica
-date: 2020-03-20T11:38:06.617Z
-thumbnail: assets/2014blondiegetty74285020_10030214.jpg
----
-We sailed from Granada to Dominica
