@@ -9,7 +9,6 @@ import { node } from "prop-types"
 const IndexPage = ( {data} ) => (
   <Layout>
     <SEO title="Home" />
-    <h1>{data.site.siteMetadata.title}</h1>
     <h3>Legs</h3>
     {data.allMarkdownRemark.edges.map(({node}) => {
       return (
