@@ -4,15 +4,22 @@ import { graphql } from "gatsby"
 export default ({ data }) => {
   const post = data.markdownRemark
   let newHtml = post.html
+  let baseUrl = ''
   if (typeof window !== 'undefined') {
-    newHtml = post.html.replace(/img src="/g, 'img src="'+window.location.origin+'/')
+    baseUrl = window.location.origin
   }
-  // const newHtml = post.html.replace(/img src="/g, 'img src="https://caribbean-odyssey.netlify.com/')
-  // 
+  
+  newHtml = post.html.replace(/img src="/g, 'img src="'+baseUrl+'/')
+  
   return (
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: newHtml }} />
+        {post.frontmatter.galleryImages && post.frontmatter.galleryImages.map((image) => {
+          return (
+            <img src={baseUrl+'/'+image} />
+          )
+        })}
       </div>
   )
 }
@@ -22,6 +29,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        galleryImages
       }
     }
   }
