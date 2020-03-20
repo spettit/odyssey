@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
         name: "pages",
@@ -22,37 +22,31 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-netlify-identity-widget',
-    'gatsby-transformer-remark',
-    'gatsby-remark-relative-images',
+    `gatsby-plugin-netlify-identity-widget`,
+
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // {
-            // resolve: 'gatsby-remark-relative-images',
-            // options: {
-            //   name: 'uploads',
-            // },
-          // },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 2048,
+            `gatsby-remark-relative-images`,
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 590,
+              },
             },
-          },
+        ],
+      },
+    },
+          
           // {
           //   resolve: 'gatsby-remark-copy-linked-files',
           //   options: {
           //     destinationDir: 'static',
           //   },
           // },
-        ],
-      },
-    },
+        // ],
+      // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
