@@ -15,6 +15,8 @@ const center = {
     west: -91
   };
 
+  const z = 5
+
 class Map extends Component {
   render() {
      return (
@@ -27,8 +29,8 @@ class Map extends Component {
           id='example-map'
           mapContainerStyle={{height: '570px', width: '750px'}}
           center = {center}
-          zoom = {6}
-          options={{maxZoom: 6, minZoom: 6, disableDefaultUI: true, draggable: false}}
+          zoom = {z}
+          options={{maxZoom: z, minZoom: z, disableDefaultUI: true, draggable: false}}
           
         //   {...other props }
         >
