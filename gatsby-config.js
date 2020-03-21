@@ -44,6 +44,16 @@ module.exports = {
             },
         ],
       },
+      
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Miltonian`
+        ],
+        display: 'swap'
+      }
     },
           
           // {
