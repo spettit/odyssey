@@ -6,10 +6,13 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import { node } from "prop-types"
 
+import Map from "../components/Map"
+
 const IndexPage = ( {data} ) => (
   <Layout>
     <SEO title="Home" />
     <h3>Legs</h3>
+    <Map />
     {data.allMarkdownRemark.edges.map(({node}) => {
       return (
         <div key={node.id} >
