@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Caribbean Odyssey`,
+    title: `the Caribbean Odyssey`,
     description: `Sailing in the Caribbean on Odyssey`,
     author: `appintheclouds.co.uk`,
   },

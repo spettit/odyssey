@@ -1,10 +1,15 @@
 import { Link } from "gatsby"
 import React from "react"
+import sea from '../images/odyssey.jpg'
+
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      // background: `#73562B`,
+      backgroundImage: `url(${sea})`,
+      backgroundSize: 'cover',
+      // backgroundAttachment: 'fixed',
       marginBottom: `1.45rem`,
     }}
   >

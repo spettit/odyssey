@@ -44,10 +44,9 @@ class Map extends Component {
         
         />
         <Marker
-            position={{
-                lat: 12.00444,
-                lng: -61.75222
-                }}
+            position={
+                legOne.points[4]
+                }
             icon={icon}
             width='10px'
             height='10px'
