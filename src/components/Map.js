@@ -10,9 +10,9 @@ const center = {
   };
   
   const bounds = {
-    north: 29,
+    north: 29.4,
     south: 5,
-    east: -58,
+    east: -57.7,
     west: -91
   };
 
@@ -29,7 +29,7 @@ class Map extends Component {
       >
         <GoogleMap
           id='example-map'
-          mapContainerStyle={{height: '570px', width: '750px'}}
+          mapContainerStyle={{width: '750px', height: '580px'}}
           center = {center}
           zoom = {z}
           options={{maxZoom: z, minZoom: z, disableDefaultUI: true, draggable: false}}
@@ -45,7 +45,7 @@ class Map extends Component {
         />
         <Marker
             position={
-                legOne.points[4]
+                legOne.points[0]
                 }
             icon={icon}
             width='10px'
