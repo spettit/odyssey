@@ -1,16 +1,16 @@
 import { Link } from "gatsby"
 import React from "react"
-import sea from '../images/odyssey.jpg'
+import sea from '../images/sea.jpg'
 
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      // background: `#73562B`,
-      backgroundImage: `url(${sea})`,
-      backgroundSize: 'cover',
+      // backgroundColor: `#20232A`,
+      // backgroundImage: `url(${sea})`,
+      // backgroundSize: 'cover',
       // backgroundAttachment: 'fixed',
-      marginBottom: `1.45rem`,
+      // marginBottom: `1.45rem`,
     }}
   >
     <div
@@ -18,14 +18,18 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
+        position: "fixed",
+        // backgroundColor: 'black',
+        // opacity: '0.7'
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            fontFamily: 'miltonian',
-            color: `white`,
+            fontFamily: 'Miltonian Tattoo',
+            color: `#4E1E17`,
+            fontSize: '5rem',
             textDecoration: `none`,
           }}
         >

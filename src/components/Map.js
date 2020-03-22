@@ -19,7 +19,9 @@ const center = {
   const z = 5
 
 class Map extends Component {
-  
+  constructor(props){
+    super(props)
+  }
   render() {
      return (
       <LoadScript
@@ -45,7 +47,7 @@ class Map extends Component {
         />
         <Marker
             position={
-                legOne.points[0]
+                legOne.points[this.props.point]
                 }
             icon={icon}
             width='10px'

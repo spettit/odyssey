@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `the Caribbean Odyssey`,
+    title: `Caribbean Odyssey`,
     description: `Sailing in the Caribbean on Odyssey`,
     author: `appintheclouds.co.uk`,
   },
@@ -50,7 +50,8 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Miltonian`
+          `Miltonian`,
+          'Miltonian+Tattoo'
         ],
         display: 'swap'
       }
