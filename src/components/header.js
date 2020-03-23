@@ -18,7 +18,7 @@ const Header = ({ siteTitle }) => (
         margin: `0 auto`,
         maxWidth: 960,
         padding: `1.45rem 1.0875rem`,
-        position: "fixed",
+        // position: "fixed",
         // backgroundColor: 'black',
         // opacity: '0.7'
       }}

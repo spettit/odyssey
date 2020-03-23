@@ -15,7 +15,7 @@ const IndexPage = ( {data} ) => {
   
   <Layout>
     <SEO title="Home" />
-    <div
+    {/* <div
       style = {{
         width: '100vw',
         height: '100vh',
@@ -25,7 +25,7 @@ const IndexPage = ( {data} ) => {
         
 
       }}
-    />
+    /> */}
 
  
     {/* <h3>Legs</h3> */}
