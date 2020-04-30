@@ -23,19 +23,12 @@ const center = {
 
 
 
-class Map extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-
-  render() {
-    
+function Map (props) {
      return (
       <LoadScript
         id="script-loader"
         googleMapsApiKey="AIzaSyAov8VpvRFBsCiFsB8pZIMa4P2NEP0qwcU"
+
         // {...other props}
       >
         <GoogleMap
@@ -56,7 +49,7 @@ class Map extends Component {
         />
         <Marker
             position={
-                gps.points[this.props.point]
+                gps.points[props.point]
                 }
             icon={icon}
             width='10px'
@@ -75,7 +68,6 @@ class Map extends Component {
        
       </LoadScript>
      )
-  }
 }
 
 export default Map
