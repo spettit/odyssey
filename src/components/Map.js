@@ -18,11 +18,6 @@ const center = {
   };
 
   const z = 5
-
-  let lineSymbol
-
-
-
 function Map (props) {
      return (
       <LoadScript
@@ -59,7 +54,7 @@ function Map (props) {
          <Polyline 
             width = {2}
             path = {gps.points}
-            options = {{strokeWeight: 2, strokeColor: '#FF0000', icons:[{icon: icon, offset: '50%'}]}}
+            options = {{strokeWeight: 2, strokeColor: '#FF0000'}}
          />
 
         
