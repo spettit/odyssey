@@ -18,12 +18,24 @@ const center = {
   };
 
   const z = 5
-function Map (props) {
+
+  let lineSymbol
+
+
+
+class Map extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+
+  render() {
+    
      return (
       <LoadScript
         id="script-loader"
         googleMapsApiKey="AIzaSyAov8VpvRFBsCiFsB8pZIMa4P2NEP0qwcU"
-
         // {...other props}
       >
         <GoogleMap
@@ -44,7 +56,7 @@ function Map (props) {
         />
         <Marker
             position={
-                gps.points[props.point]
+                gps.points[this.props.point]
                 }
             icon={icon}
             width='10px'
@@ -54,7 +66,7 @@ function Map (props) {
          <Polyline 
             width = {2}
             path = {gps.points}
-            options = {{strokeWeight: 2, strokeColor: '#FF0000'}}
+            options = {{strokeWeight: 2, strokeColor: '#FF0000', icons:[{icon: icon, offset: '50%'}]}}
          />
 
         
@@ -63,6 +75,7 @@ function Map (props) {
        
       </LoadScript>
      )
+  }
 }
 
 export default Map
