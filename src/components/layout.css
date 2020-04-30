@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #dbcb9e;
-  background-image: url("../images/parchment-background.jpeg");
+  background-image: url("../../static/assets/parchment-background.jpeg");
   background-size: cover;
 }
 article,

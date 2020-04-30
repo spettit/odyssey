@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { GoogleMap, GroundOverlay, LoadScript, Marker, Polyline } from '@react-google-maps/api'
-import old_map from '../images/old_map.jpg'
-import icon from '../images/sailing.png'
-import legOne from './leg-one.json'
+import old_map from '../../static/assets/old_map.jpg'
+import icon from '../../static/assets/odessey.png'
+import gps from '../../static/assets/gps.json'
 
 const center = {
     lat: 17.5,
@@ -47,7 +47,7 @@ class Map extends Component {
         />
         <Marker
             position={
-                legOne.points[this.props.point]
+                gps.points[this.props.point]
                 }
             icon={icon}
             width='10px'
@@ -56,7 +56,7 @@ class Map extends Component {
 
          <Polyline 
             width = {2}
-            path = {legOne.points}
+            path = {gps.points}
             options = {{strokeWeight: 2, strokeColor: '#FF0000'}}
          />
 
