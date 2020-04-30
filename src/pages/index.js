@@ -7,7 +7,6 @@ import SEO from "../components/seo"
 import { node } from "prop-types"
 
 import Map from "../components/Map"
-import cover from "../images/cover2.jpg"
 
 const IndexPage = ( {data} ) => {
   const [point, setPoint] = useState(0)

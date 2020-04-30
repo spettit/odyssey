@@ -1,6 +1,5 @@
 import { Link } from "gatsby"
 import React from "react"
-import sea from '../images/sea.jpg'
 
 
 const Header = ({ siteTitle }) => (
