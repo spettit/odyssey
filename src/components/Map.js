@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { GoogleMap, GroundOverlay, LoadScript, Marker, Polyline } from '@react-google-maps/api'
 import old_map from '../../static/assets/old_map.jpg'
 import icon from '../../static/assets/odessey.png'
+// import path from '../../static/assets/odessey.svg'
 import gps from '../../static/assets/gps.json'
 
 const center = {
@@ -18,11 +19,19 @@ const center = {
 
   const z = 5
 
+  let lineSymbol
+
+
+
 class Map extends Component {
-  constructor(props){
-    super(props)
+
+  constructor(props) {
+    super(props);
   }
+
+
   render() {
+    
      return (
       <LoadScript
         id="script-loader"
@@ -57,7 +66,7 @@ class Map extends Component {
          <Polyline 
             width = {2}
             path = {gps.points}
-            options = {{strokeWeight: 2, strokeColor: '#FF0000'}}
+            options = {{strokeWeight: 2, strokeColor: '#FF0000', icons:[{icon: icon, offset: '50%'}]}}
          />
 
         
