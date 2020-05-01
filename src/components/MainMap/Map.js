@@ -7,7 +7,7 @@ import {
 } from "@react-google-maps/api"
 import old_map from "../../../static/assets/old_map.jpg"
 import icon from "../../../static/assets/odessey.png"
-import gps from "../../../static/assets/gps.json"
+
 
 const center = {
   lat: 17.5,
@@ -41,18 +41,16 @@ const Map = props => {
       <GroundOverlay key={"url"} url={old_map} bounds={bounds} opacity={1} />
 
       <Marker
-        position={gps.points[props.point]}
+        position={props.point}
         icon={icon}
-        width="10px"
-        height="10px"
       />
 
       <Polyline
         width={2}
-        path={gps.points}
+        path={props.gps}
         options={{
           strokeWeight: 2,
-          strokeColor: "#FF0000",
+          strokeColor: "#B3322C",
           icons: [{ icon: icon, offset: "50%" }],
         }}
       />
