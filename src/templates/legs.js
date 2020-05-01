@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Map from '../components/MainMap/Map'
+
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -16,7 +16,7 @@ export default ({ data }) => {
       <div>
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: newHtml }} />
-        <Map />
+
         {post.frontmatter.galleryImages && post.frontmatter.galleryImages.map((image) => {
           return (
             <img src={baseUrl+'/'+image} />
