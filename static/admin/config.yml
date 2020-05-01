@@ -38,24 +38,24 @@ collections:
         name: "home"
         file: "site/content/home.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
           - label: Team
             name: team
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Position, name: position, widget: string}
-              - {label: Photo, name: photo, widget: image}
+              - { label: Name, name: name, widget: string }
+              - { label: Position, name: position, widget: string }
+              - { label: Photo, name: photo, widget: image }
       - label: "Crew"
         name: "crew"
         file: "site/content/crew.yml"
         fields:
-          - {label: Title, name: title, widget: string}
-           - {label: Intro, name: intro, widget: markdown}
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
           - label: Locations
             name: locations
             widget: list
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}  
+              - { label: Name, name: name, widget: string }
+              - { label: Address, name: address, widget: string }
