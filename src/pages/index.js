@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { LoadScript } from '@react-google-maps/api'
 
-import Layout from "../components/layout"
+
+import Layout from "../components/layout/layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import SEO from "../components/layout/seo"
 import { node } from "prop-types"
 
-import Map from "../components/Map"
+import Map from "../components/MainMap/Map"
 
 const IndexPage = ( {data} ) => {
   const [point, setPoint] = useState(0)
@@ -28,8 +30,16 @@ const IndexPage = ( {data} ) => {
 
  
     {/* <h3>Legs</h3> */}
-    <Map point={point}/>
+    <LoadScript
+        id="script-loader"
+        googleMapsApiKey="AIzaSyAov8VpvRFBsCiFsB8pZIMa4P2NEP0qwcU"
+        // {...other props}
+      >
+        <Map point={point}/>
+      </LoadScript>
+    
     <button onClick={() => setPoint(point+1)}>Move</button>
+
     {data.allMarkdownRemark.edges.map(({node}) => {
       return (
         <div key={node.id} >
