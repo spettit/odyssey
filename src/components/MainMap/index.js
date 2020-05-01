@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from 'react';
-import moment from 'moment'
 import Map from './Map'
 import gps from "../../../static/assets/gps.json"
+import getTime from 'date-fns/getTime'
+import format from 'date-fns/format'
+import add from 'date-fns/add'
 
 var interval
 
 const MainMap = () => {
     // const [point, setPoint] = useState(0)
     const [count, setCount] = useState(0)
-    const startDate = moment(1422777600000)
+    const startDate = new Date()
 
-    const [theDate, setTheDate] = useState(moment())
+    const [theDate, setTheDate] = useState(new Date())
     const [lastPoint, setLastPoint] = useState({ lat: 0, lng: 0 });
     const [nextPoint, setnextPoint] = useState({ lat: 0, lng: 0 });
     const [lastPointIndex, setLastPointIndex] = useState(0);
@@ -27,7 +29,7 @@ const MainMap = () => {
     useEffect(() => {
         console.log('init')
         setPoints(gps)
-        setTheDate(moment(points[0].timestamp).clone())
+        setTheDate(new Date(points[0].timestamp))
         // setStartDate(moment(points[0].timestamp).clone())
 
         setMarkerCoords({lat: points[0].lat, lng: points[0].lng})
@@ -36,7 +38,7 @@ const MainMap = () => {
     useEffect(() => {
         if (points && points.length > 0) {
           for (let i = lastPointIndex; i < points.length; i++) {
-            if (points[i].timestamp > theDate.valueOf()) {
+            if (points[i].timestamp > getTime(theDate)) {
               setLastPoint(points[i - 1]);
               setnextPoint(points[i]);
               setLastPointIndex(i - 1);
@@ -64,7 +66,7 @@ const MainMap = () => {
       }, [lastPoint, nextPoint, theDate, count]);
     
     //   // eslint-disable-next-line react-hooks/exhaustive-deps
-      useEffect(() => setTheDate(theDate.add(1, "h")), [count]);
+      useEffect(() => setTheDate(add(theDate, {hours:1})), [count]);
 
     return (
         <div>
@@ -79,7 +81,7 @@ const MainMap = () => {
         run
       </button>
       <button onClick={() => clearInterval(interval)}>Stop</button>
-      <div>theDate {theDate.format("DD/MM/YYYY HH:mm")}</div>
+      <div>{format(theDate, "dd MMMM yyyy HH:mm")}</div>
       {/* <div>startDate {startDate.format("DD/MM/YYYY HH:mm:ss")}</div>
 
       <div>count {count}</div>
