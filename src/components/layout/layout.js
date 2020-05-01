@@ -7,6 +7,7 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
 
 import Header from "./Header"
 import SideBar from "./SideBar"
@@ -23,28 +24,24 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const MainWindow = styled.div`
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 30px;
+  `
+
   return (
-    <>
+    <MainWindow>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-          
-        }}
-      >
-        <SideBar />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}
-          {' '}<a href="http://www.appintheclouds.com">AppInTheClouds</a>
-        </footer>
-      </div>
-    </>
+
+      <main>{children}</main>
+
+      <footer>
+        © {new Date().getFullYear()}{" "}
+        <a href="http://www.appintheclouds.com">AppInTheClouds</a>
+      </footer>
+    </MainWindow>
   )
 }
-
-
 
 export default Layout
