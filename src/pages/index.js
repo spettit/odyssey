@@ -7,7 +7,7 @@ import SEO from "../components/layout/seo"
 import MainMap from "../components/MainMap"
 
 const IndexPage = ( {data} ) => {
-  
+  console.log('index data', data)
   return (
   
   <Layout>
